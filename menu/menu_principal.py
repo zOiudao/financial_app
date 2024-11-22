@@ -3,14 +3,14 @@ from os import system
 
 def menu_principal():
     from .user_menu import user_menu
-    from .driver_menu import driver_menu
+    from .instituicao_menu import instituicao_menu
     system('clear')
     print('MENU PRINCIPAL')
     menu = [
         {
             'type': 'list',
             'message': 'Selecine abaixo',
-            'choices': ['Usuários', 'Motoristas', 'Chaves', 'EPIs', 'Sair'],
+            'choices': ['Usuários', 'Receitas', 'Despesas', 'Exibir', 'Sair'],
             'name': 'choice'
         },
     ]
@@ -19,13 +19,13 @@ def menu_principal():
     if opt['choice'] == 'Usuários':
         user_menu()
         
-    if opt['choice'] == 'Motoristas':
-        driver_menu()
+    if opt['choice'] == 'Receitas':
+        instituicao_menu()
         
-    if opt['choice'] == 'Chaves':
+    if opt['choice'] == 'Despesas':
         'chave_menu'
         
-    if opt['choice'] == 'EPIs':
+    if opt['choice'] == 'Exibir':
         'epi_menu'
         
     if opt['choice'] == 'Sair':
